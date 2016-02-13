@@ -30,10 +30,10 @@ function initializeClock(id, eventTime) {
     function updateClock() {
         var t = getTimeRemaining(eventTime);
 
-        daysSpan.innerHTML = t.days;
-        hoursSpan.innerHTML = t.hours;
-        minsSpan.innerHTML = t.minutes;
-        secsSpan.innerHTML = t.seconds;
+        daysSpan.innerHTML = ('0' + t.days).slice(-2);
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minsSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
         if (t.total <= 0) {
             clearInterval(timeInterval);
