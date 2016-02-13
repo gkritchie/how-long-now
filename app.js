@@ -4,7 +4,7 @@ var jen = {
 };
 
 function getTimeRemaining(eventTime) {
-    var t = Date.parse(eventTime) - Date.parse(new Date());
+    var t = Date.parse(eventTime) - Date.now();
     var secs = Math.floor((t / 1000) % 60);
     var mins = Math.floor((t / 1000 / 60) % 60);
     var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
