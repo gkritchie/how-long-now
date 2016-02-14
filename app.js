@@ -63,12 +63,22 @@ function initializeClock(id, eventTime) {
 function initializeEvents(id) {
     var evList = document.getElementById(id);
 
+    function setActiveEvent(activeEv) {
+        var items = document.getElementsByClassName('eventlink');
+
+        for (var i = 0; i < items.length; i++) {
+            items[i].classList.remove('active');
+        }
+        activeEv.classList.add('active');
+    }
+
     events.forEach(function(ev, index, arr) {
         var newEl = document.createElement('li');
-        newEl.className = 'eventLink';
+        newEl.className = 'eventlink';
         newEl.innerHTML = ev.evName;
         newEl.onclick = function() {
             initializeClock('clockdiv', ev.evDate);
+            setActiveEvent(newEl);
         };
         evList.appendChild(newEl);
     });

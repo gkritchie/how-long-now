@@ -3,20 +3,33 @@
     margin: 0 auto;
 }
 
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
 #events {
     width: 250px;
     margin: auto;
     position: absolute;
-    left: 0px;
+    left: 80px;
 }
 
 .eventlist {
     list-style-type: none;
 }
 
-h1 {
+.eventlink {
+    padding: 5px;
     font-family: sans-serif;
-    text-align: center;
+    border-radius: 3px;
+    background: #00BF96;
+    color: #fff;
+    margin: 3px;
+}
+
+.active {
+    background: #00816A;
 }
 
 #clockdiv {
