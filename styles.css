@@ -4,9 +4,14 @@
 }
 
 #events {
-    float: left;
     width: 250px;
     margin: auto;
+    position: absolute;
+    left: 0px;
+}
+
+.eventlist {
+    list-style-type: none;
 }
 
 h1 {
@@ -21,7 +26,7 @@ h1 {
     font-weight: 100;
     text-align: center;
     font-size: 30px;
-    width: 950px;
+    width: 100%;
     margin: auto;
 }
 
