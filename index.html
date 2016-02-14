@@ -6,9 +6,11 @@
 </head>
 <body>
     <div id="container">
-        <aside id="eventlist">
-        </aside>
         <h1>How long now?</h1>
+        <aside id="events">
+            <ul id="eventlist" class="eventlist">
+            </ul>
+        </aside>
         <div id="clockdiv">
             <div>
                 <span class="days"></span>
@@ -31,7 +33,7 @@
     <script src="./app.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            initializeClock('clockdiv', jen.evDate);
+            initializeEvents('eventlist');
         });
     </script>
 </body>
